@@ -187,7 +187,7 @@ void bootWiFi(fs::FS &fs) {
             } else if (comment && cur == char(10)) {
                 comment = false;
             }
-            if (!comment && (cur > 32 && cur < 127)) {
+            if (!comment && (cur >= 32 && cur < 127)) {
                 line += cur;
             }
         }
